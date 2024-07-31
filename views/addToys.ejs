@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Toy App</title>
+</head>
+<body>
+    <%- include('partials/navbar.ejs') %> 
+    <div class="container mt-3">
+        <div class="text-center"><h2>Add New Toy</h2></div>
+        <br>
+        <div class="text-center">
+            <form action="/toys" method="POST" enctype="multipart/form-data">
+                <label for="productName">Toy Name:</label><br>
+                <input type="text" id="productName" name="productName" required><br><br>
+
+                <label for="agegroup">Age Group:</label><br>
+                <input type="text" id="agegroup" name="agegroup" required><br><br>
+
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" required><br><br>
+
+                <label for="price">Price:</label><br>
+                <input type="number" id="price" name="price" required><br><br>
+
+                <label for="description">Description:</label><br>
+                <textarea id="description" name="description" rows="4" required></textarea><br><br>
+
+                <label for="image">Image:</label><br>
+                <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+                <button type="submit" class="btn btn-primary">Add Toy</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
